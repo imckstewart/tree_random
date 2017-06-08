@@ -1,0 +1,14 @@
+PROJ_SOURCES = \
+	src/tree_random.c
+
+TEST_SOURCES = \
+	test/test.c\
+	test/testfunc.c
+
+PROJ_INCLUDES = \
+	src/tree_random.h
+
+TEST_INCLUDES = \
+	test/test.h\
+	test/dims.h
+
