@@ -39,9 +39,9 @@ exit(1);
 
 /*....................................................................*/
 void setConstDefaults(treeRandConstType *rinc){
-  rinc->randGenType         = gsl_rng_ranlxs2;
+  rinc->randGenType         = (gsl_rng_type *)gsl_rng_ranlxs2;
   rinc->randSeed            = 342972;
-  rinc->quasiRandGenType    = gsl_qrng_halton;
+  rinc->quasiRandGenType    = (gsl_qrng_type *)gsl_qrng_halton;
   rinc->numDims             = N_DIMS;
   rinc->numInRandoms        = TREE_N_RANDOMS;
   rinc->verbosity           = 0;
