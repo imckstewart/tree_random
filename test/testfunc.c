@@ -187,7 +187,7 @@ void makeAndPlotPoints(configInfo *par){
   double *outRandDensities=NULL;
   double (*outRandLocations)[N_DIMS]=NULL;
   treeRandConstType rinc;
-  int levelI=0,di,i;
+  int di,i;
   unsigned int startI=0;
 
   setConstDefaults(&rinc);

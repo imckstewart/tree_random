@@ -597,12 +597,12 @@ The random locations in the input list are optionally quasi-random, which avoids
 Notes:
   - The function expects rini->randGen to be correctly allocated by the calling routine via the standard GSL call.
   */
-  double totalIntegral,probabilities[tree->lastLeafI],axesMid[rinc->numDims],scales[rinc->numDims],sign,point[rinc->numDims];
-  int i,di,maxInRandI,lastInRandI,piIn,indices[rinc->numDims],ppi,status=0;
-  double (*inRandLocations)[rinc->numDims]=NULL,r[rinc->numDims],density,acceptanceChance,shrinkFrac;
+  double totalIntegral,probabilities[tree->lastLeafI],axesMid[rinc->numDims],point[rinc->numDims];
+  int i,di,ppi,status=0;
+  double r[rinc->numDims],density;
   double inRandLocation[N_DIMS];
   unsigned int desiredNumsPoints[tree->lastLeafI];
-  unsigned int piOutStart,piOut,lastPiOut,totalNumPoints,numPointsThisCell,currentPointI;
+  unsigned int totalNumPoints,numPointsThisCell,currentPointI;
   gsl_qrng *qrSeqGen = NULL;
   double standoffs[tree->lastLeafI];
   char message[TREE_STRLEN];
